@@ -90,11 +90,18 @@ const Dashboard = () => {
 
         {/* Load More */}
         {data?.data?.length >= PER_PAGE && (
-          <Box sx={{ textAlign: 'center', mt: 4 , mb: 4 }}>
+          <Box sx={{ textAlign: 'center', mt: 4, mb: 4 }}>
             <Button
               variant='outlined'
               onClick={handleLoadMore}
               disabled={isFetching}
+              sx={{
+                background: '#ce416b',
+                color: '#fff',
+                borderColor: '#ce416b',
+                borderRadius: '16px',
+                '&:hover': { background: '#ce416b', borderColor: '#ce416b' },
+              }}
             >
               {isFetching ? 'Loading...' : 'Load More'}
             </Button>
