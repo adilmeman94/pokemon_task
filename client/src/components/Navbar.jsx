@@ -27,7 +27,10 @@ export default function Navbar() {
         </Typography>
 
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-          <Avatar sx={{ bgcolor: 'secondary.main' }}>{userData?.avatar}</Avatar>
+          <Avatar
+            sx={{ bgcolor: 'secondary.main' }}
+            src={userData?.avatar}
+          ></Avatar>
           <Button
             color='inherit'
             onClick={logout}

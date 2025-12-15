@@ -36,10 +36,10 @@ const Dashboard = () => {
 
   useEffect(() => {
     if (page === 1) {
-      setMergedData(data?.data || []);  
+      setMergedData(data?.data || []);
     } else if (data?.data) {
       setMergedData((prev) => [...prev, ...data.data]);
-    } 
+    }
   }, [data]);
 
   return (
@@ -90,7 +90,7 @@ const Dashboard = () => {
 
         {/* Load More */}
         {data?.data?.length >= PER_PAGE && (
-          <Box sx={{ textAlign: 'center', mt: 4 }}>
+          <Box sx={{ textAlign: 'center', mt: 4 , mb: 4 }}>
             <Button
               variant='outlined'
               onClick={handleLoadMore}
