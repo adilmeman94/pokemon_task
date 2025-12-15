@@ -1,0 +1,25 @@
+{
+  "name": "chat-ai",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "server": "yarn workspace @pokemon/server run dev",
+    "client": "yarn workspace @pokemon/client run dev",
+    "start": "concurrently --kill-others-on-fail \"yarn run server\"  \"yarn run client\"",
+    "build:server": "yarn workspace @pokemon/server run build",
+    "build:client": "yarn workspace @pokemon/client run build",
+    "build": "concurrently --kill-others-on-fail \"yarn run build:server\"  \"yarn run build:client\"",
+    "serve:server": "yarn workspace @pokemon/server run serve",
+    "serve:client": "yarn workspace @pokemon/client run serve",
+    "serve": "concurrently --kill-others-on-fail \"yarn run serve:server\"  \"yarn run serve:client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
