@@ -7,7 +7,6 @@ import Box from '@mui/material/Box';
 
 const ProtectedRoute = ({ children }) => {
   const { token, loading } = useAuth();
-  console.log('ProtectedRoute token:', token);
 
   if (loading) {
     return (

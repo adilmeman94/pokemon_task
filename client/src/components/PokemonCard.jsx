@@ -44,7 +44,7 @@ const PokemonCard = ({ pokemon }) => {
 
         {/* Pokemon Image */}
         <Box
-          component="img"
+          component='img'
           src={pokemon.image.hires}
           alt={pokemon.name.english}
           sx={{
@@ -68,7 +68,7 @@ const PokemonCard = ({ pokemon }) => {
       >
         {/* Name */}
         <Typography
-          variant="h6"
+          variant='h6'
           sx={{
             fontWeight: 700,
             color,
@@ -78,12 +78,19 @@ const PokemonCard = ({ pokemon }) => {
         </Typography>
 
         {/* Type pill */}
-        <Box sx={{ mt: 1 }} gap={1} display="flex" justifyContent="center" alignItems="center" flexWrap="wrap">         
+        <Box
+          sx={{ mt: 1 }}
+          gap={1}
+          display='flex'
+          justifyContent='center'
+          alignItems='center'
+          flexWrap='wrap'
+        >
           {pokemon.type.map((type) => (
             <Chip
               key={type}
               label={type}
-              size="small"
+              size='small'
               sx={{
                 backgroundColor: POKEMON_TYPE_COLORS[type],
                 color: '#fff',
@@ -91,7 +98,7 @@ const PokemonCard = ({ pokemon }) => {
               }}
             />
           ))}
-        </Box>         
+        </Box>
       </Box>
     </Card>
   );

@@ -21,3 +21,23 @@ export const POKEMON_TYPE_COLORS = {
   Special: '#1c4684',
   Status: '#999999',
 };
+
+export const POKEMON_TYPES = Object.keys(POKEMON_TYPE_COLORS);
+
+export const SORT_BY_OPTIONS = [
+  { value: 'id', label: 'ID' },
+  { value: 'name', label: 'Name' },
+  { value: 'hp', label: 'HP' },
+  { value: 'attack', label: 'Attack' },
+  { value: 'defense', label: 'Defense' },
+  { value: 'spattack', label: 'Special Attack' },
+  { value: 'spdefense', label: 'Special Defense' },
+  { value: 'speed', label: 'Speed' },
+  { value: 'total', label: 'Total' },
+];
+
+export const ORDER_OPTIONS = [
+  { value: 'asc', label: 'Ascending' },
+  { value: 'desc', label: 'Descending' },
+];
+
